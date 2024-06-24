@@ -35,7 +35,7 @@ Weights can be found [here](https://pan.baidu.com/s/1W-Ame3A3s378JKSB2bOjNw?pwd=
 
 ### About training
 
-Due to the limited computational resources, the images are resized to `640x640` during training. You are suggested to use the larger sizes, which has been proven to improve the performance.
+Due to the limited computational resources, the images are resized to `640x640` during training. You are suggested to use the larger sizes since many works have proven that the large sizes can improve the performance.
 
 ### A note on correction
 
