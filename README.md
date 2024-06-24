@@ -29,6 +29,14 @@ AUC@5    AUC@10  AUC@20  Prec
 42.55    61.69   76.75   93.87 
 ```
 
+### Weights
+
+Weights can be found [here](https://pan.baidu.com/s/1W-Ame3A3s378JKSB2bOjNw?pwd=38n7)
+
+### About training
+
+Due to the limited computational resources, the images are resized to `640x640` during training. You are suggested to use the larger sizes, which has been proven to improve the performance.
+
 ### A note on correction
 
 In Table 1 and Table 2, the AUC scores of SP+OANet and SP+SGMNet are falsely cited. The same story goes for our [another work](https://ieeexplore.ieee.org/document/10485434). Here we make the correction:
