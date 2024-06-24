@@ -37,7 +37,7 @@ In Table 1, the AUC scores of SuperPoint+SGMNet are corrected to 40.5 , 59.0 , 7
 
 In Table 2, the AUC scores of OANet are corrected to 26.82 , 45.04 , 62.17
 
-Notice that this is just a copy/paste mistake and has no influence about the ranking of tables and the conclusion of papers. 
+Notice that this is just a copy/paste mistake and has no influence about the ranking of methods in tables and the conclusion of papers. 
 
 ## Citation
 If you use any ideas from the paper or code from this repo, please consider cite our paper through IEEE Xplore.
