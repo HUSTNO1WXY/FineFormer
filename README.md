@@ -17,7 +17,7 @@ The default will resize images to `640x640`.
 
 Weights can be found [here](https://pan.baidu.com/s/1W-Ame3A3s378JKSB2bOjNw?pwd=38n7)
 
-##Data Preparation
+### Data preparation
 
 For details of data preparation, please refer to [loftr](https://github.com/zju3dv/LoFTR).
 
