@@ -30,7 +30,9 @@ bash ./scripts/reproduce_test/outdoor_ds.sh
 ### Evaluation on YFCC100M
 The script for evaluation on YFCC100M can be found in [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork).
 
-Actually, in our paper, some parameters has not been carefully tuned. When the RANSAC threshold is set to 0.3, the performance of our proposed method can be boosted again:
+When the RANSAC threshold is set to 1.0, you can reproduce results in paper.
+
+When the RANSAC threshold is set to 0.3, the performance of our proposed method can be boosted again:
 ```txt
 Evaluation Results (mean over 15 pairs):
 AUC@5    AUC@10  AUC@20  Prec
