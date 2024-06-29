@@ -28,7 +28,7 @@ bash ./scripts/reproduce_test/outdoor_ds.sh
 ```
 
 ### Evaluation on YFCC100M
-The script for evaluation on YFCC100M can be found in [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork).
+For the script for evaluation on YFCC100M, you can refer to [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork).
 
 When the RANSAC threshold is set to 1.0, you can reproduce results in paper.
 
