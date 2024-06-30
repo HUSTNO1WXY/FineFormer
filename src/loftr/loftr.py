@@ -71,67 +71,14 @@ class LoFTR(nn.Module):
         # 2. coarse-level loftr module
         [feat_c0, pos_encoding0], [feat_c1, pos_encoding1] = self.pos_encoding(feat_c0,data['pos_scale0']), self.pos_encoding(feat_c1,data['pos_scale1'])
 
-        # ##PCA降维####
-        # pos_encoding0, pos_encoding1 = pos_encoding0.reshape(1, 256, 6400).transpose(1,2), pos_encoding1.reshape(1, 256, 6400).transpose(1,2),
-        # P0, P1 = pos_encoding0.squeeze(), pos_encoding1.squeeze()
-        # P0, P1 = P0.cpu().numpy(), P1.cpu().numpy()
-        # P0_pca, P1_pca = pca(P0, 3), pca(P1, 3)
-        # P0_pca, P1_pca = torch.from_numpy(P0_pca), torch.from_numpy(P1_pca)
-        # P0_pca, P1_pca = P0_pca.cuda(), P1_pca.cuda()
-        # P0_pca, P1_pca = P0_pca.view(data['hw0_c'][0], data['hw0_c'][1], -1), P1_pca.view(data['hw1_c'][0],
-        #                                                                                   data['hw1_c'][1], -1)
-        # P0_pca, P1_pca = P0_pca.cpu().numpy(), P1_pca.cpu().numpy()
-        # plt.imshow(P0_pca)
-        # plt.savefig('D:\AAAI-supp\\rebuttal-our0')
-
         mask_c0 = mask_c1 = None  # mask is useful in training
         if 'mask0' in data:
             mask_c0, mask_c1 = data['mask0'].flatten(-2), data['mask1'].flatten(-2)
 
         feat_c0, feat_c1 = self.loftr_coarse(feat_c0, feat_c1, feat_f0, feat_f1, pos_encoding0, pos_encoding1, mask_c0, mask_c1)
 
-
-        # # attention map visualization
-        # # normalize
-        # # feat_c0, feat_c1 = map(lambda feat: feat / feat.shape[-1] ** .5,
-        # #                        [feat_c0, feat_c1])
-        # V0, V1 = feat_c0, feat_c1
-        # att = torch.einsum("nld,nsd->nls", V0, V1)
-        # A0 = torch.mean(att, dim=-2)
-        # # A0 = torch.mean(A, dim=-2)
-        # # A0 = torch.max(A, dim=-1)[1]
-        # A0 = A0.squeeze().view(data['hw0_c'][0], data['hw0_c'][1])
-        # A0 = A0.cpu().numpy()
-        #
-        # img0_pth = "D:\IMG1.jpg"
-        # img1_pth = "D:\IMG0.jpg"
-        # # img0_raw = cv2.imread(img0_pth)
-        # # img1_raw = cv2.imread(img1_pth)
-        # # img0_raw = cv2.resize(img0_raw, (
-        # # img0_raw.shape[1] // 8 * 8, img0_raw.shape[0] // 8 * 8))  # input size shuold be divisible by 8
-        # # img1_raw = cv2.resize(img1_raw, (img1_raw.shape[1] // 8 * 8, img1_raw.shape[0] // 8 * 8))
-        #
-        # img = Image.open(img1_pth, mode='r')
-        # img_h, img_w = img.size[0], img.size[1]
-        # plt.subplots(nrows=1, ncols=1, figsize=(0.02 * img_h, 0.02 * img_w))
-        # img_h, img_w = int(img.size[0] * 1), int(img.size[1] * 1)
-        # img = img.resize((img_h, img_w))
-        # plt.imshow(img, alpha=1)
-        # plt.axis('off')
-        #
-        # A0 = A0.astype('uint8')
-        # mask = cv2.resize(A0, (img_h, img_w))
-        # normed_mask = mask / mask.max()
-        # normed_mask = (normed_mask * 255).astype('uint8')
-        # plt.imshow(normed_mask, alpha=0.6, interpolation='nearest', cmap="jet")
-        # plt.savefig('D:\\AAAI-re0-0.jpg')
-
-
-        #start_time = time.time()
         # 3. match coarse-level
         self.coarse_matching(feat_c0, feat_c1, data, mask_c0=mask_c0, mask_c1=mask_c1)
-        # end_time = time.time()
-        # print("used time is{}".format(end_time - start_time))
 
         # 4. fine-level refinement
         # merged by new descriptors\
@@ -174,23 +121,3 @@ class LoFTR(nn.Module):
             if k.startswith('matcher.'):
                 state_dict[k.replace('matcher.', '', 1)] = state_dict.pop(k)
         return super().load_state_dict(state_dict, *args, **kwargs)
-
-
-# def pca(data, n_dim):
-#     '''
-#     pca is O(D^3)
-#     :param data: (n_samples, n_features(D))
-#     :param n_dim: target dimensions
-#     :return: (n_samples, n_dim)
-#     '''
-#     data = data - np.mean(data, axis = 0, keepdims = True)
-#
-#     cov = np.dot(data.T, data)
-#
-#     eig_values, eig_vector = np.linalg.eig(cov)
-#     # print(eig_values)
-#     indexs_ = np.argsort(-eig_values)[:n_dim]
-#     picked_eig_values = eig_values[indexs_]
-#     picked_eig_vector = eig_vector[:, indexs_]
-#     data_ndim = np.dot(data, picked_eig_vector)
-#     return data_ndim
