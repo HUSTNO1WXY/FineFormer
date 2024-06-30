@@ -16,7 +16,7 @@ from .utils.coarse_matching import CoarseMatching
 from .utils.fine_matching import FineMatching
 
 
-class LoFTR(nn.Module):
+class FineFormer(nn.Module):
     def __init__(self, config):
         super().__init__()
         # Misc
