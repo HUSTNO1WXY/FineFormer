@@ -56,7 +56,7 @@ Due to the limited computational resources, the images are resized to `640x640` 
 
 ### A note on correction
 <details>
-  <summary>[Click to expand]</summary>
+  
 In Table 1 and Table 2, the AUC scores for some entries are repeated. The same story goes for our [another work](https://ieeexplore.ieee.org/document/10485434). Here we make the correction:
 
 In Table 1, the AUC scores of SuperPoint+SGMNet on MegaDepth are corrected to 40.5 , 59.0 , 73.6 
