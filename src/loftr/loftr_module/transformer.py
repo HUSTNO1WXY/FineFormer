@@ -8,24 +8,6 @@ from einops import rearrange
 from matplotlib import pyplot as plt
 
 from src.loftr.loftr_module.attention import layernorm2d, LinearAttention, FullAttention
-def pca(data, n_dim):
-    '''
-    pca is O(D^3)
-    :param data: (n_samples, n_features(D))
-    :param n_dim: target dimensions
-    :return: (n_samples, n_dim)
-    '''
-    data = data - np.mean(data, axis = 0, keepdims = True)
-
-    cov = np.dot(data.T, data)
-
-    eig_values, eig_vector = np.linalg.eig(cov)
-    # print(eig_values)
-    indexs_ = np.argsort(-eig_values)[:n_dim]
-    picked_eig_values = eig_values[indexs_]
-    picked_eig_vector = eig_vector[:, indexs_]
-    data_ndim = np.dot(data, picked_eig_vector)
-    return data_ndim
 
 def ones(tensor):
     if tensor is not None:
