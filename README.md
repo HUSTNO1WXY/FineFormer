@@ -55,7 +55,8 @@ python  ./train.py
 Due to the limited computational resources, the images are resized to `640x640` during training. You are suggested to use the larger sizes since many works have proven that the large sizes can improve the performance.
 
 ### A note on correction
-
+<details>
+  <summary>[Click to expand]</summary>
 In Table 1 and Table 2, the AUC scores for some entries are repeated. The same story goes for our [another work](https://ieeexplore.ieee.org/document/10485434). Here we make the correction:
 
 In Table 1, the AUC scores of SuperPoint+SGMNet on MegaDepth are corrected to 40.5 , 59.0 , 73.6 
@@ -63,6 +64,6 @@ In Table 1, the AUC scores of SuperPoint+SGMNet on MegaDepth are corrected to 40
 In Table 2, the AUC scores of SP+OANet on YFCC100M are corrected to 26.82 , 45.04 , 62.17
 
 Notice that this is just a copy/paste mistake and has no influence about evaluation and conclusions of our papers. 
-
+</details>
 ## Citation
 If you use any ideas from the paper or code from this repo, please consider cite our paper through IEEE Xplore.
