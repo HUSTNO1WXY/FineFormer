@@ -65,5 +65,6 @@ In Table 2, the AUC scores of SP+OANet on YFCC100M are corrected to 26.82 , 45.0
 
 Notice that this is just a copy/paste mistake and has no influence about evaluation and conclusions of our papers. 
 </details>
-## Citation
+
+### Citation
 If you use any ideas from the paper or code from this repo, please consider cite our paper through IEEE Xplore.
