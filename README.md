@@ -59,10 +59,8 @@ Due to the limited computational resources, the images are resized to `640x640` 
   <summary>[Click to expand]</summary>
   
 In Table 1 and Table 2, the AUC scores for some entries are repeated. The same story goes for our [another work](https://ieeexplore.ieee.org/document/10485434). Here we make the correction:
-
-<p align="center">
-  <img src="assets/teaser.png" width="500">
-</p>
+<img align="center" src="table1.png" width=840 /><p align="center">
+<img align="center" src="table2.png" width=840 />
 
 Notice that this is just a copy/paste mistake and has no influence about evaluation and conclusions of our papers.
 </details>
