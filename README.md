@@ -34,7 +34,7 @@ AUC@5    AUC@10  AUC@20  Prec
 ```
 
 ### Evaluation on YFCC100M
-For the script for evaluation on YFCC100M, you can refer to [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork). The settings for YFCC100M can be found in 'src/loftr/utils/cvpr_ds_config.py'
+For the script for evaluation on YFCC100M, you can refer to [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork).
 
 When the RANSAC threshold is set to 1.0, you can reproduce results in paper.
 
