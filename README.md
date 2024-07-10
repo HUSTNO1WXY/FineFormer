@@ -38,7 +38,7 @@ For the script for evaluation on YFCC100M, you can refer to [superglue](https://
 
 When the RANSAC threshold is set to 1.0, you can reproduce results in paper.
 
-When the RANSAC threshold is set to 0.3, the performance of our proposed method can be boosted again:
+The hyperparameters in the original paper aren't extensively tuned. After preparing the code for release, we tuned the hyperparameters and made some improvements. For example, when the RANSAC threshold is set to 0.3, the performance of our proposed method can be boosted again:
 ```txt
 Evaluation Results (mean over 15 pairs):
 AUC@5    AUC@10  AUC@20  Prec
