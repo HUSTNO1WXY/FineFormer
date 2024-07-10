@@ -34,11 +34,11 @@ AUC@5    AUC@10  AUC@20  Prec
 ```
 
 ### Evaluation on YFCC100M
-For the script for evaluation on YFCC100M, you can refer to [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork).
+For the script for evaluation on YFCC100M, you can refer to [superglue](https://github.com/magicleap/SuperGluePretrainedNetwork). The settings for YFCC100M can be found in 'src/loftr/utils/cvpr_ds_config.py'
 
 When the RANSAC threshold is set to 1.0, you can reproduce results in paper.
 
-The hyperparameters in the original paper aren't extensively tuned. After preparing the code for release, we tuned the hyperparameters and made some improvements. For example, when the RANSAC threshold is set to 0.3, the performance of our proposed method can be boosted again:
+After preparing the code for release, we tuned the hyperparameters and made some improvements. For example, when the RANSAC threshold is set to 0.3, the performance of our proposed method can be boosted again:
 ```txt
 Evaluation Results (mean over 15 pairs):
 AUC@5    AUC@10  AUC@20  Prec
