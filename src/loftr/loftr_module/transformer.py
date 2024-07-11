@@ -234,16 +234,7 @@ class LocalFeatureTransformer_UNet(nn.Module):
                 nn.init.xavier_uniform_(p)
 
     def forward(self, feat0, feat1, feat_f0, feat_f1, pos0, pos1, mask0=None, mask1=None):
-        """
-        Args:
-            feat0 (torch.Tensor): [N, C, H, W]
-            feat1 (torch.Tensor): [N, C, H, W]
-            pos1,pos2:  [N, C, H, W]
-        Outputs:
-            feat0: [N,-1,C]
-            feat1: [N,-1,C]
-            flow_list: [L,N,H,W,4]*1(2)
-        """
+
         bs = feat0.size(0)
         c, h, w = feat0.shape[1], feat0.shape[2], feat0.shape[3]
 
