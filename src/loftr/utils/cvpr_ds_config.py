@@ -45,6 +45,6 @@ _CN.FINE.D_MODEL = 128
 _CN.FINE.D_FFN = 128
 _CN.FINE.NHEAD = 8
 _CN.FINE.LAYER_NAMES = ['self', 'cross'] * 1
-_CN.FINE.ATTENTION = 'linear'
+_CN.FINE.ATTENTION = 'full'
 
 default_cfg = lower_config(_CN)
