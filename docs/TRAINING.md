@@ -35,6 +35,7 @@ tar xf testdata/scannet_test_1500.tar
 We symlink the datasets to the `data` directory under the main project directory.
 
 # megadepth
+```shell
 # -- # train and test dataset (train and test share the same dataset)
 ln -sv /path/to/megadepth/phoenix /path/to/megadepth_d2net/Undistorted_SfM /path/to/FineFormer/data/megadepth/train
 ln -sv /path/to/megadepth/phoenix /path/to/megadepth_d2net/Undistorted_SfM /path/to/FineFormer/data/megadepth/test
