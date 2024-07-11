@@ -3,6 +3,10 @@
 ## Introduction
 The official code of our ICME 2024 paper.
 
+<p align="center">
+  <img src="cover.png" width="800">
+</p>
+
 ## Dependencies
 * Python 3 = 3.8.12
 * PyTorch = 1.9.1
