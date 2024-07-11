@@ -4,7 +4,7 @@
 The official code of our ICME 2024 paper.
 
 <p align="center">
-  <img src="cover.png" width="800">
+  <img src="cover.png" width="400">
 </p>
 
 ## Dependencies
