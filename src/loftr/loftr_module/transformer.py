@@ -234,7 +234,6 @@ class LocalFeatureTransformer_UNet(nn.Module):
                 nn.init.xavier_uniform_(p)
 
     def forward(self, feat0, feat1, feat_f0, feat_f1, pos0, pos1, mask0=None, mask1=None):
-
         bs = feat0.size(0)
         c, h, w = feat0.shape[1], feat0.shape[2], feat0.shape[3]
 
