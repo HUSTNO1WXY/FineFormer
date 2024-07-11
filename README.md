@@ -19,7 +19,7 @@ Weights can be found [here](https://pan.baidu.com/s/1W-Ame3A3s378JKSB2bOjNw?pwd=
 
 ### Data preparation
 
-For details of data preparation, please refer to [this](https://github.com/HUSTNO1WXY/FineFormer/blob/main/README.md).
+For details of data preparation, please refer to [this](https://github.com/HUSTNO1WXY/FineFormer/blob/main/docs/TRAINING.md).
 
 ### Evaluation on MegaDepth
 ```shell
