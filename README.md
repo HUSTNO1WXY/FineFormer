@@ -21,13 +21,13 @@ Weights can be found [here](https://pan.baidu.com/s/1W-Ame3A3s378JKSB2bOjNw?pwd=
 
 For details of data preparation, please refer to [this](https://github.com/HUSTNO1WXY/FineFormer/blob/main/docs/TRAINING.md).
 
-### Evaluation on MegaDepth
+### Evaluation on MegaDepth (640*640)
 ```shell
 # with shell script
 bash ./scripts/reproduce_test/outdoor_ds.sh
 ```
 
-you can reproduce results in paper (640*640), namely,
+you can reproduce results in paper, namely,
 ```txt
 AUC@5    AUC@10  AUC@20  Prec
 48.77    65.20   77.80   97.29 
