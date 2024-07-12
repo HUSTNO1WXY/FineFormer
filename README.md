@@ -27,7 +27,7 @@ For details of data preparation, please refer to [this](https://github.com/HUSTN
 bash ./scripts/reproduce_test/outdoor_ds.sh
 ```
 
-you can reproduce results in paper, namely,
+you can reproduce results in paper (640*640), namely,
 ```txt
 AUC@5    AUC@10  AUC@20  Prec
 48.77    65.20   77.80   97.29 
