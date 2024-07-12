@@ -21,7 +21,9 @@ Weights can be found [here](https://pan.baidu.com/s/1W-Ame3A3s378JKSB2bOjNw?pwd=
 
 For details of data preparation, please refer to [this](https://github.com/HUSTNO1WXY/FineFormer/blob/main/docs/TRAINING.md).
 
-### Evaluation on MegaDepth (640*640)
+### Evaluation on MegaDepth
+For evaluation, the images are resized to `640x640`.
+
 ```shell
 # with shell script
 bash ./scripts/reproduce_test/outdoor_ds.sh
