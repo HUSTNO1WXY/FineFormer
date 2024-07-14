@@ -9,8 +9,7 @@ cd $PROJECT_DIR
 
 data_cfg_path="configs/data/megadepth_test_1500.py"
 main_cfg_path="configs/loftr/outdoor/buggy_pos_enc/loftr_ds.py"
-ckpt_path="D:\LoFTR-master-scalenet\logs\tb_logs\原模型-调参\version_0\checkpoints\epoch=1-auc@5=0.484-auc@10=0.650-auc@20=0.779.ckpt"
-#ckpt_path="D:\LoFTR-master-scalenet\logs\\tb_logs\新模型-每层融合\\version_2\checkpoints\epoch=2-auc@5=0.485-auc@10=0.655-auc@20=0.779.ckpt"
+ckpt_path="./weights.ckpt"
 dump_dir="dump/loftr_ds_outdoor"
 profiler_name="inference"
 n_nodes=1  # mannually keep this the same with --nodes
