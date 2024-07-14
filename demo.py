@@ -34,14 +34,10 @@ default_cfg['coarse']
 
 
 # Load example images
-img0_pth = "D:\image-matching-challenge\\train\multi-temporal-temple-baalshamin\images\gohistoric_26501_z.png"
-img1_pth = "D:\image-matching-challenge\\train\multi-temporal-temple-baalshamin\images\\hpim3190.png"
+img0_pth = "assets/phototourism_sample_images/london_bridge_19481797_2295892421.jpg"
+img1_pth = "assets/phototourism_sample_images/london_bridge_78916675_4568141288.jpg"
 img0_raw = cv2.imread(img0_pth, cv2.IMREAD_GRAYSCALE)
 img1_raw = cv2.imread(img1_pth, cv2.IMREAD_GRAYSCALE)
-# img0_raw = cv2.resize(img0_raw, (img0_raw.shape[1]//32, img0_raw.shape[0]//32))  # input size shuold be divisible by 8
-# img1_raw = cv2.resize(img1_raw, (img1_raw.shape[1]//32, img1_raw.shape[0]//32))
-# img0_raw = cv2.resize(img0_raw, (img0_raw.shape[1]//8*8, img0_raw.shape[0]//8*8))  # input size shuold be divisible by 8
-# img1_raw = cv2.resize(img1_raw, (img1_raw.shape[1]//8*8, img1_raw.shape[0]//8*8))
 img0_raw = cv2.resize(img0_raw, (640, 640))
 img1_raw = cv2.resize(img1_raw, (640, 640))
 
