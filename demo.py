@@ -21,9 +21,7 @@ import matplotlib.pyplot as plt
 # The outdoor and indoor models share the same config.
 # You can change the default values like thr and coarse_match_type.
 matcher = LoFTR(config=default_cfg)
-matcher.load_state_dict(torch.load("D:\LoFTR-master-scalenet\logs\\tb_logs\原模型-调参\\version_0\checkpoints\epoch=1-auc@5=0.484-auc@10=0.650-auc@20=0.779.ckpt")['state_dict'], strict=True)
-#matcher.load_state_dict(torch.load("D:\LoFTR-master-scalenet\logs\\tb_logs\新模型-每层融合\\version_2\checkpoints\epoch=2-auc@5=0.485-auc@10=0.655-auc@20=0.779.ckpt")['state_dict'], strict=True)
-#matcher.load_state_dict(torch.load("D:\LoFTR-master-scalenet\logs\\tb_logs\模拟人类视觉实验-交替注意力\\version_1\checkpoints\epoch=4-auc@5=0.468-auc@10=0.636-auc@20=0.765.ckpt")['state_dict'], strict=False)
+matcher.load_state_dict(torch.load("./weights.ckpt")['state_dict'], strict=True)
 matcher = matcher.eval().cuda()
 #print(matcher.state_dict())
 
