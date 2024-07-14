@@ -54,7 +54,7 @@ If you want to train yourself, please
 python  ./train.py
 ```
 
-Due to the limited computational resources, the images are resized to `640x640` during training. You are suggested to use the larger sizes since many works have proven that the large sizes can improve the performance.
+Due to the limited computational resources, the images are resized to `640x640` during training. You are suggested to use the larger sizes, for example, `832x832` for training since many works have proven that the large sizes can improve the performance.
 
 ### Citation
 If you use any ideas from the paper or code from this repo, please consider cite our paper through IEEE Xplore.
