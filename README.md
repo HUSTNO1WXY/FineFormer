@@ -3,6 +3,9 @@
 ### Introduction
 The official code of our ICME 2024 paper.
 
+## TODO List and ETA
+- [x] Simplify the code
+
 ### Dependencies
 * Python 3 = 3.8.12
 * PyTorch = 1.9.1
