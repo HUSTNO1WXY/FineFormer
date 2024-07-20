@@ -1,6 +1,6 @@
 # Beyond Global Cues: Unveiling the Power of Fine Details in Image Matching
 ### [Paper](https://www.online-ecp.org/icme2024/Home/Download?id=2024003184.pdf)
-<br/>
+
 ### Introduction
 The official code of our ICME 2024 paper. 
 
