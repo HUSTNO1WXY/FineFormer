@@ -1,7 +1,12 @@
 # Beyond Global Cues: Unveiling the Power of Fine Details in Image Matching
+### [Paper](https://www.online-ecp.org/icme2024/Home/Download?id=2024003184.pdf)
+<br/>
+
+> Beyond Global Cues: Unveiling the Power of Fine Details in Image Matching 
+> ICME 2024
 
 ### Introduction
-The official code of our ICME 2024 paper. The paper can be found [here](https://www.online-ecp.org/icme2024/Home/Download?id=2024003184.pdf) 
+The official code of our ICME 2024 paper. 
 
 ### Dependencies
 * Python 3 = 3.8.12
